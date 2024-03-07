@@ -11,29 +11,31 @@
 }
 
 body {
+
     font-family: "Open Sans", Arial, sans-serif;
     min-height: 100vh;
     background-color: #fafafa;
     color: #262626;
     padding-bottom: 3rem;
+    text-align: center;
 }
-
 
 /* Positioning our logo to the center */
 .profile-image {
+
     display: flex;
     align-items:center;
     justify-content: center;
-    
 }
+
 /* Positioning user settings to the center */
 .profile-user-settings {
 
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
+
 /* Positioning user stats to the center */
 .profile-stats {
 
@@ -42,74 +44,81 @@ body {
     justify-content: center;
     font-size: 21px;
 }
+
+/* Creating space betweent the button and username*/
+.profile-edit-btn{
+
+    margin-left: 1rem;
+}
+
 /* Positioning profile bio to the center, setting the desired font style and size */
 .profile-bio {
+
     display: flex;
     align-items: center;
     justify-content: center;
     font-style: oblique;
     font-size: 30px;
 }
-/*Settings for our gallery items*/
+/*Settings for the gallery items*/
 div.gallery-item {
 
     margin: 5px;
     border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-    border: 1px solid #777;
-
-}
-
-div.gallery-item img {
-
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
+
 /*Allowing hover effect over the images*/
 div.gallery-item img:hover{
+
     box-shadow: 0 0 5px 8px rgba(0, 140, 186, 0.5);
 }
+
 /* Positioning gallery information to the center */
 div.gallery-item-info {
 
     padding: 15px;
-    text-align: center;
+    text-align: center;  
 }
-/* Positioning gallery items to the center */
 
+div.gallery-item-type {
+
+    display: none;
+}
+
+div.gallery-item-info li {
+
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+/* Positioning gallery items to the center */
 div.gallery-item-likes{
+
     padding: 15px;
     text-align: center;
 }
 /* Positioning gallery images to the center */
 
-.gallery-image {
-    width: 600;
-    height: 400;
+div.gallery-item img{
+
+    display: inline-block;
+    max-height: 200px;
+    height: 100%;
+    width: 100%;
 }
 /*Grid configurations */
 .gallery {
-    display: grid;
-    row-gap: 30px;
-    grid-gap: 8px;
-    grid-template-columns: repeat(3, minmax(150px, 1fr));
-    grid-template-rows: repeat(2,260px);
-    padding: 10px;
-    grid-auto-flow: dense;
-    height: 100%;
-    justify-content: space-between;
-    
+    display: inline-grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    grid-template-rows: repeat(225px 225px);
+    margin-top: 2.5rem;
 }
-/*Settings for the pictures in the grid */
-div.gallery-item {
 
-    grid-column: span 3;    
-    grid-row: span 3;
-    grid-column: span 1;
-    grid-row: span 2;
-} 
-
+/* Adding animation to the user name*/
 .profile-user-name {
 
    	/*Animation settings for the fade-in */
@@ -119,6 +128,7 @@ div.gallery-item {
        animation-fill-mode: both;
        animation-delay: 2s;
    }
+
    /*Allows us to specify our animations*/
    @keyframes fade-in {
        /* Setting the opacity level for the elements*/
