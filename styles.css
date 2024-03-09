@@ -10,6 +10,7 @@
     box-sizing: border-box;
 }
 
+/* Body style */
 body {
 
     font-family: "Open Sans", Arial, sans-serif;
@@ -24,7 +25,7 @@ body {
 .profile-image {
 
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -46,7 +47,7 @@ body {
 }
 
 /* Creating space betweent the button and username*/
-.profile-edit-btn{
+.profile-edit-btn {
 
     margin-left: 1rem;
 }
@@ -60,6 +61,7 @@ body {
     font-style: oblique;
     font-size: 30px;
 }
+
 /*Settings for the gallery items*/
 div.gallery-item {
 
@@ -71,7 +73,7 @@ div.gallery-item {
 }
 
 /*Allowing hover effect over the images*/
-div.gallery-item img:hover{
+div.gallery-item img:hover {
 
     box-shadow: 0 0 5px 8px rgba(0, 140, 186, 0.5);
 }
@@ -80,7 +82,7 @@ div.gallery-item img:hover{
 div.gallery-item-info {
 
     padding: 15px;
-    text-align: center;  
+    text-align: center;
 }
 
 div.gallery-item-type {
@@ -95,25 +97,27 @@ div.gallery-item-info li {
 }
 
 /* Positioning gallery items to the center */
-div.gallery-item-likes{
+div.gallery-item-likes {
 
     padding: 15px;
     text-align: center;
 }
+
 /* Positioning gallery images to the center */
 
-div.gallery-item img{
+div.gallery-item img {
 
     display: inline-block;
     max-height: 200px;
     height: 100%;
     width: 100%;
 }
+
 /*Grid configurations */
 .gallery {
     display: inline-grid;
     gap: 2rem;
-    grid-template-columns: repeat(3, minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: repeat(225px 225px);
     margin-top: 2.5rem;
 }
@@ -121,17 +125,24 @@ div.gallery-item img{
 /* Adding animation to the user name*/
 .profile-user-name {
 
-   	/*Animation settings for the fade-in */
-       animation-name:fade-in;
-       animation-duration: 1s;
-       animation-timing-function: ease-out;
-       animation-fill-mode: both;
-       animation-delay: 2s;
-   }
+    /*Animation settings for the fade-in */
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
 
-   /*Allows us to specify our animations*/
-   @keyframes fade-in {
-       /* Setting the opacity level for the elements*/
-       from {opacity: 0%; width: 0%;}
-       to {opacity: 100% width 100%;}
-   }
+/*Allows us to specify our animations*/
+@keyframes fade-in {
+
+    /* Setting the opacity level for the elements*/
+    from {
+        opacity: 0%;
+        width: 0%;
+    }
+
+    to {
+        opacity: 100% width 100%;
+    }
+}
