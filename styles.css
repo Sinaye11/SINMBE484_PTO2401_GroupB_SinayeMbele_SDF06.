@@ -85,10 +85,10 @@ div.gallery-item-info {
     text-align: center;
 }
 
-div.gallery-item-type {
+ div.gallery-item-type {
 
     display: none;
-}
+} 
 
 div.gallery-item-info li {
 
@@ -148,8 +148,7 @@ div.gallery-item img {
 }
 
 /*Media query  */
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 320px) {
 
     .container {
         display: inline-block;
@@ -157,10 +156,10 @@ div.gallery-item img {
 
     .gallery {
         display: inline-grid;
-        gap: 1rem;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: repeat(225px 225px);
-        margin-top: 2.5rem;
+        gap: 0.5rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-rows: repeat(12p5x 125px);
+        margin-top: 1.5rem;
     }
 
     
@@ -169,4 +168,52 @@ div.gallery-item img {
         margin-right: 2rem;
     }
             
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    
+    .gallery {
+        display: inline-grid; /* Initialises the gird which all elements inside gallery will be affected by grid properties*/
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Sets the number of column with in the grid*/
+        grid-template-rows: 225px 225px; /* Sets the row width and height of the grid*/
+        grid-gap: 1.5rem; /* Adds a gap between grid elements*/
+        margin-top: 2.5rem;
+    }
+    
+    .gallery-item{ 
+        position: relative;
+        color: #fff;
+        flex: 1 0 0 20rem; 
+        cursor: pointer;
+        font-size: 1.7rem;
+        
+    } 
+    /* Hiding the likes and comments */
+     .gallery-item-info {
+        display: none;
+    }
+    
+    .gallery-item-info li {
+        display: inline-block;
+        margin-right: 2rem;
+    }
+    /* Hover effect for the gallery items and info */
+    .gallery-item:hover .gallery-item-info,
+    .gallery-item:focus .gallery-item-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); 
+    }
+    /* Hiding the word "like" and "comments in the gallery */
+    .visually-hidden{
+        display: none;
+    } 
+
 }
