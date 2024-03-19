@@ -173,12 +173,60 @@ div.gallery-item img {
 
 @media only screen and (max-width: 600px) {
 
-    
+    /* Grid layout for the gallery */
     .gallery {
-        display: inline-grid; /* Initialises the gird which all elements inside gallery will be affected by grid properties*/
-        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Sets the number of column with in the grid*/
-        grid-template-rows: 225px 225px; /* Sets the row width and height of the grid*/
-        grid-gap: 1.5rem; /* Adds a gap between grid elements*/
+        display: inline-grid; 
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+        grid-template-rows: 225px 225px; 
+        grid-gap: 1.5rem; 
+        margin-top: 2.5rem;
+    }
+    
+    .gallery-item{ 
+        position: relative;
+        color: #fff;
+        flex: 1 0 0 20rem; 
+        cursor: pointer;
+        font-size: 1.7rem;
+        
+    } 
+    /* Hiding the likes and comments */
+     .gallery-item-info {
+        display: none;
+    }
+    
+    .gallery-item-info li {
+        display: inline-block;
+        margin-right: 2rem;
+    }
+    /* Hover effect for the gallery items and info */
+    .gallery-item:hover .gallery-item-info,
+    .gallery-item:focus .gallery-item-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); 
+    }
+    /* Hiding the word "like" and "comments in the gallery */
+    .visually-hidden{
+        display: none;
+    } 
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    /* Grid layout for the gallery */
+    .gallery {
+        display: inline-grid; 
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+        grid-template-rows: 225px 225px; 
+        grid-gap: 1.5rem; 
         margin-top: 2.5rem;
     }
     
